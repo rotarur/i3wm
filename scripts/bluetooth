@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Left click
+if [[ ${BLOCK_BUTTON} -eq 1 ]]; then
+	sudo hciconfig hci0 up
+  #sudo bluetooth on
+#bluetoothctl << EOF
+#power on
+#EOF
+## Middle click
+#elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
+#  sudo bluetooth toggle
+# Right click
+elif [[ ${BLOCK_BUTTON} -eq 3 ]]; then
+				echo "RIGHT"
+  #sudo bluetooth off
+bluetoothctl << EOF
+power off
+EOF
+fi
+
+STATUS=$(hciconfig | grep -wo UP)
+
+if [[ "${STATUS}" = "UP" ]]; then
+  echo "on"
+  echo ""
+else
+	echo "off"
+	echo ""
+fi

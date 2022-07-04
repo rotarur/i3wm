@@ -1,0 +1,7 @@
+XF86MonBrightnessUp, XF86MonBrightnessDown( Brightness up and down )
+
+XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute ( Volume up, down, and mute )
+
+XF86AudioPlay, XF86AudioNext, XF86AudioPrev ( Play music, next/previous tracks )
+
+
